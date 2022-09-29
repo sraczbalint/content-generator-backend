@@ -25,8 +25,6 @@ app.use("/api/req", resRouter);
 
 app.use(express.urlencoded({ extended: true }));
 
-console.log("PORT", process.env.PORT);
-
-const port = app.listen(process.env.PORT || 8800, "0.0.0.0", () => {
-  console.log(`Backend is running on a port: ${port}!`);
+const port = app.listen(process.env.PORT, "0.0.0.0", () => {
+  console.log(`Backend is running on a port: ${process.env.PORT}!`);
 });
