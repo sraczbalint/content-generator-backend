@@ -10,7 +10,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "heroku-postbuild": " npm install && npm run",
-    "open": "concurrently \"http-server -a localhost -p 3000\" \"open http://localhost:3000/build\" \"open https://mern-travel-app-backend.herokuapp.com\""
+    "open": "concurrently \"http-server -a localhost -p 3000\" \"open http://localhost:3000/build\" \"open https://sraczb-content-creator-backend.herokuapp.com/\""
   },
   "name": "content-generator-backend",
   "version": "1.0.0",
