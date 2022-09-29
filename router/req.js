@@ -11,16 +11,16 @@ const openai = new OpenAIApi(configuration);
 
 router.post("/", async (req, res) => {
   try {
-    console.log(req.body.prompt);
     const response = await openai.createCompletion({
       model: "text-davinci-002",
-      prompt: "PLease add a product description to breadcrumbs",
+      prompt: req.body.prompt,
       temperature: 0.5,
-      max_tokens: 100,
-      top_p: 1.0,
-      frequency_penalty: 0.0,
-      presence_penalty: 0.0,
+      max_tokens: 120,
+      top_p: 1,
+      frequency_penalty: 0,
+      presence_penalty: 0,
     });
+    console.log(JSON.stringify(req.body.prompt));
     res.status(200).json({ result: response.data.choices[0].text });
   } catch (err) {
     console.log("err", err);
